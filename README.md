@@ -23,7 +23,7 @@ or
 ```sh
 $ (myvenv) ~$ python -m pip install django
 ```
-Runserver - Check where ever you find file manage.py 
+Runserver - find out where ever you find file manage.py and run this command
 ```sh
 $ (myvenv) ~$ python manage.py runserver 
 ```
@@ -32,4 +32,4 @@ $ (myvenv) ~$ python manage.py runserver
 Make sure answer and teach those people whom asking you about any related to this topic
 
 ### Contact
-@morensya on twitter
+-
