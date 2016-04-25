@@ -10,7 +10,7 @@ First, move into dir where do you want to put the cloning git, for example E:
 $ git clone [git-repo-url]asep.git
 $ cd asep
 ```
-Install Virtual Machine on E:/asep/ and activate it
+set virtual environment for django project on E:/asep/, so it won't bother your machine then activate it
 ```sh
 $ python -m venv myenv
 $ myenv/Scripts/activate.bat
