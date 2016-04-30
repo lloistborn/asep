@@ -10,7 +10,7 @@ class SearchTwitter(object):
         
     def SearchKicauan(self,masukan):
         start=time.clock()
-        for status in tweepy.Cursor(self.__myapi.search,masukan,lang="id",result_type="recent").items(50):
+        for status in tweepy.Cursor(self.__myapi.search,masukan,lang="id",result_type="recent").items(100):
             self.__kicauan.append(status.text)
         return self.__kicauan
     

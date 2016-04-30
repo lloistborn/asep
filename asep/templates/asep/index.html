@@ -14,7 +14,7 @@
 						<form action="{% url 'stream' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
 							<label>Insert topic</label>
 							<div class="form-group">
-								<textarea id="pesan" name='pesan' rows="3" cols="50" maxlength="50" required=""></textarea>
+								<textarea placeholder="contoh: faisal basri" id="pesan" name='pesan' rows="3" cols="50" maxlength="50" required=""></textarea>
 								<div id="counter_char"></div>
 							</div>
 
