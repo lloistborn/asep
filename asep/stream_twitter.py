@@ -62,7 +62,7 @@ class StreamTwitter():
             #     for j in range(0,len(hasil[i])):
             #         dtbs.masukan_kicauan(temp,kicauan_asli[hasil[i][j]],i+1)
             # print("berhasil ditelusuri")     
-            balasan=temp+" mempunyai sentimen "+str(("%.2f" % pos))+" % positif, "+ str(("%.2f" % neg))+" % negatif, dan "+ str(("%.2f" % net))+" % netral"
+            balasan=status+" mempunyai sentimen "+str(("%.2f" % pos))+" % positif, "+ str(("%.2f" % neg))+" % negatif, dan "+ str(("%.2f" % net))+" % netral"
             # for timeline in api.user_timeline():
                 # if balasan in timeline.text:
                     # api.destroy_status(timeline.id)
@@ -84,7 +84,7 @@ class StreamTwitter():
         # print(jam_akhir,menit_akhir,detik_akhir)
         # print("selish waktunya adaalah jam : "+str(jam_awal-jam_akhir)+" menit "+str(abs(menit_awal-menit_akhir))+" detik "+str(abs(detik_awal-detik_akhir)))           
         
-        return tempKicauan, balasan, pos, neg, net
+        return tempKicauan, balasan, len(hasil[0]), len(hasil[1]), len(hasil[2])
 
     # def on_error(self, status_code):
     #     print >> sys.stderr, 'Encountered error with status code:', status_code

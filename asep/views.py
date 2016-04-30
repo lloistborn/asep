@@ -23,6 +23,7 @@ def stream(request):
 		streams = StreamTwitter()
 		print('error dak')
 		kicauan, balasan, pos, neg, net = streams.stream(topic)
+		print(pos, neg, net)
 
 		return render(request, 'asep/result.html', {
 			'title_page' 	: 'Home',
@@ -30,7 +31,7 @@ def stream(request):
 			'balasan'		: balasan,
 			'positif'		: pos,
 			'negatif'		: neg,
-			'netral'		: net,
+			'netral'		: net
 			})	
 
 	return render(request, 'asep/result.html', {

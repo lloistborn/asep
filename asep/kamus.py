@@ -3,10 +3,12 @@ from django.conf import settings
 
 class Kamus(object):
     def __init__(self):
-        self.__file_stopword    = os.path.join(settings.MEDIA_ROOT, "stopword.txt")
+        self.__file_stopword    = os.path.join(settings.MEDIA_ROOT, "kata_dasar.txt")
         self.__kbba_file        = os.path.join(settings.MEDIA_ROOT, "kbba.txt")
         self.__file_positif     = os.path.join(settings.MEDIA_ROOT, "positif.txt")
         self.__file_negatif     = os.path.join(settings.MEDIA_ROOT, "negatif.txt") 
+
+
 
     def kata_stopword(self):
         f           = open(self.__file_stopword,"r")
