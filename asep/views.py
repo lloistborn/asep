@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .streamtwitter import StreamTwitter
+
 # Create your views here.
 def index(request):
 	title_page = 'Home'
@@ -9,4 +11,13 @@ def index(request):
 		})
 
 def stream(request):
-	return 0
+	if request.method == 'POST':
+
+		msg = request.POST['pesan']
+
+		st = new StreamTwitter()
+
+    return render(request, 'app/result.html', {
+		'title_page' 	: title_page,
+		'result'		: result,
+		})	
