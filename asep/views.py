@@ -7,3 +7,6 @@ def index(request):
 	return render(request, 'asep/index.html', {
 			'title_page' :	title_page,
 		})
+
+def stream(request):
+	return 0
