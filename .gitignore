@@ -1,6 +1,6 @@
 *.pyc
 __pycache__
 env
-pythonenv
+pythonenv/
 db.sqlite3
 .DS_Store
