@@ -1,5 +1,7 @@
-import nltk,Dokument_Frequency,Kamus
-class Pre_Processing(object):
+import nltk 
+from .document_frequency, kamus import DocumentFrequency, Kamus
+
+class PreProcessing(object):
     def __init__(self):
         self.__kms=Kamus.Kamus()
         

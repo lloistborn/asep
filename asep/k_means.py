@@ -1,4 +1,5 @@
 import math
+
 class K_Means(object):
     def __init__(self): 
         self.__centeroid_x=[1,0,0]

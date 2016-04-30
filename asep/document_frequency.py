@@ -1,11 +1,13 @@
-import nltk, Kamus
+import nltk
+
+from .kamus import Kamus
 
 class DocumentFrequency(object):
     def __init__(self):
         self.__DF_Positif=[]
         self.__DF_Negatif=[]
         self.__kms=Kamus.Kamus()
-        
+
     def hitung_positif(self,kicauan):
         pos=self.__kms.kata_positif()
         positif=nltk.word_tokenize(pos)
