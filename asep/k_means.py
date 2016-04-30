@@ -5,14 +5,14 @@ class KMeans(object):
         self.__centeroid_x=[1,0,0]
         self.__centeroid_y=[0,1,0]
         self.__check=False
-        self.__cluster=[[] for x in xrange (4)]
-        self.__cluster_temp=[[] for x in xrange (4)]        
+        self.__cluster=[[] for x in range (4)]
+        self.__cluster_temp=[[] for x in range (4)]        
         
     def cluster(self,DF_x,DF_y): 
         self.__cluster_awal(DF_x,DF_y)
         while self.__check != True:
             self.__cluster_temp=self.__cluster
-            self.__cluster=[[] for x in xrange (4)]
+            self.__cluster=[[] for x in range (4)]
             for j in range(len(self.__centeroid_x)):
                 temp=0 
                 for k in range(len(self.__cluster_temp[j])-1):

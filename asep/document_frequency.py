@@ -6,7 +6,7 @@ class DocumentFrequency(object):
     def __init__(self):
         self.__DF_Positif=[]
         self.__DF_Negatif=[]
-        self.__kms=Kamus.Kamus()
+        self.__kms=Kamus()
 
     def hitung_positif(self,kicauan):
         pos=self.__kms.kata_positif()

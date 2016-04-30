@@ -4,7 +4,7 @@ from .kamus import Kamus
 
 class TweetNormalize(object):
     def __init__(self):
-        self.__kms=Kamus.Kamus()
+        self.__kms=Kamus()
         
     def remove_unique_character(self,kicauan):
         for i in range(0,len(kicauan)):

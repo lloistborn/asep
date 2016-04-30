@@ -4,7 +4,7 @@ from .kamus import Kamus
 
 class PreProcessing(object):
     def __init__(self):
-        self.__kms=Kamus.Kamus()
+        self.__kms=Kamus()
         
     def stopword_removal(self,kicauan):
         stopword=self.__kms.kata_stopword()
