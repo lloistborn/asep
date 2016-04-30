@@ -1,4 +1,5 @@
 import os
+from django.conf import settings
 
 class Kamus(object):
     def __init__(self):
