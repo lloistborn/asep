@@ -1,5 +1,6 @@
 import nltk 
-from .document_frequency, kamus import DocumentFrequency, Kamus
+from .document_frequency import DocumentFrequency 
+from .kamus import Kamus
 
 class PreProcessing(object):
     def __init__(self):

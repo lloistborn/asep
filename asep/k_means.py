@@ -1,6 +1,6 @@
 import math
 
-class K_Means(object):
+class KMeans(object):
     def __init__(self): 
         self.__centeroid_x=[1,0,0]
         self.__centeroid_y=[0,1,0]

@@ -1,4 +1,6 @@
-import re,nltk,Kamus
+import re, nltk
+
+from .kamus import Kamus
 
 class TweetNormalize(object):
     def __init__(self):

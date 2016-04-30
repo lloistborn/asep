@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-	url(r'^$', views.stream, name='stream'),
+	url(r'^stream$', views.stream, name='stream'),
 ]

@@ -1,4 +1,5 @@
-import tweepy,time
+import tweepy, time
+
 class SearchTwitter(object):
     
     def __init__(self):
@@ -9,7 +10,7 @@ class SearchTwitter(object):
         
     def SearchKicauan(self,masukan):
         start=time.clock()
-        for status in tweepy.Cursor(self.__myapi.search,masukan,lang="id",result_type="recent").items(300):
+        for status in tweepy.Cursor(self.__myapi.search,masukan,lang="id",result_type="recent").items(10):
             self.__kicauan.append(status.text)
         return self.__kicauan
     
