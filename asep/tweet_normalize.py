@@ -5,6 +5,7 @@ from .kamus import Kamus
 class TweetNormalize(object):
     def __init__(self):
         self.__kms=Kamus()
+        nltk.data.path.append('/nltk_data/')
         
     def remove_unique_character(self,kicauan):
         for i in range(0,len(kicauan)):

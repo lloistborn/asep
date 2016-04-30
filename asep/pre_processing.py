@@ -2,9 +2,11 @@ import nltk
 from .document_frequency import DocumentFrequency 
 from .kamus import Kamus
 
-class PreProcessing(object):
+class PreProcessing(object):        
     def __init__(self):
         self.__kms=Kamus()
+        nltk.data.path.append('/nltk_data/')
+
         
     def stopword_removal(self,kicauan):
         stopword=self.__kms.kata_stopword()

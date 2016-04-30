@@ -3,7 +3,9 @@ import nltk
 from .kamus import Kamus
 
 class DocumentFrequency(object):
+
     def __init__(self):
+        nltk.data.path.append('/nltk_data/')
         self.__DF_Positif=[]
         self.__DF_Negatif=[]
         self.__kms=Kamus()

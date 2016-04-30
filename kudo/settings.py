@@ -125,8 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-NLTK_URL = '/nltk/'
-NLTK_ROOT = os.path.join(BASE_DIR, 'nltk')
+NLTK_URL = '/nltk_data/'
+NLTK_ROOT = os.path.join(BASE_DIR, 'nltk_data')
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
