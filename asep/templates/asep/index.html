@@ -1,0 +1,28 @@
+{% extends 'asep/base.html' %}
+
+{% block content %}
+<div class="row" style="margin-bottom:20px;">
+	<div class="col-sm-12">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>Topic</strong>
+					</div>
+
+					<div class="panel-body">
+						<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+							<label>Insert topic</label>
+							<div class="form-group">
+								<textarea id="pesan" name='pesan' rows="3" cols="50" maxlength="50" required=""></textarea>
+								<div id="counter_char"></div>
+							</div>
+
+            				<input id="btnencode" class="btn btn-primary" type="submit" value="stream!">
+						</form>
+                	</div> 
+                </div>
+            </div>
+	</div>
+</div>
+{% endblock content %}
