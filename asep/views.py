@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 import tweepy
-from .stream_twitter import StreamTwitter
-
+# from .stream_twitter import StreamTwitter
+from .search_twitter import SearchTwitter
 # Create your views here.
 def index(request):
 	title_page = 'Home'
@@ -12,22 +12,20 @@ def index(request):
 		})
 
 def stream(request):
-
+	kicauan=''
 	if request.method == 'POST':
 		topic = request.POST['pesan']
 
-		auth 	= tweepy.OAuthHandler("iJx3wTVeN0Kq9kw5Az3Dg", "ew0UH2mE7v3X8fXVNrviURsTG2KOtDR7wfOilgj2w")
-		auth.set_access_token("89917052-4VPBIVRGLzPT7VNFXWm9mLX7Kq3IGsYDjLpRBXt7r", "Os1AGJ79g4MOhJLWJqvmDflhoZiUrlbP07TsPzkiBFc")
-		api 	=tweepy.API(auth)
-		sapi 	= tweepy.streaming.Stream(auth, StreamTwitter())
-		sapi.filter(track=[topic])
+		cari=SearchTwitter()
+		kicauan=cari.SearchKicauan(topic)
+		print(kicauan[0])
 
-		return render(request, 'app/result.html', {
-			'title_page' 	: title_page,
-			'result'		: result,
+		return render(request, 'asep/result.html', {
+			'title_page' 	: 'Home',
+			'result'		: kicauan,
 			})	
 
-	return render(request, 'app/result.html', {
-		'title_page' 	: title_page,
-		'result'		: result,
+	return render(request, 'asep/result.html', {
+		'title_page' 	: 'Home',
+		'result'		: kicauan,
 			})	
